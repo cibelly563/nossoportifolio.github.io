@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: italic;
 }
 body{
     background-color: black;
@@ -27,7 +27,7 @@ body{
 
 button{
     padding: 10px 40px;
-    font-size: 18px;
+    font-size: 30px;
     font-weight: 600;
     background-color: rgb(7, 7, 155);
     border: 0;
@@ -37,8 +37,12 @@ button{
 }
 h2.titulo{
     color: #fff;
-    font-size: 38px;
+    font-size: 48px;
     text-align: center;
+}
+
+h2.titulo span{
+    color: rgb(7, 7, 155);
 }
 /*ESTILO DO CABEÇALHO*/
 header{
@@ -89,7 +93,7 @@ section.topo-do-site.flex{
 
 .topo-do-site h1{
     color:#ffff;
-    font-size: 40px;
+    font-size: 48px;
 }
 
 .topo-do-site .txt-topo-site h1 span{
@@ -119,4 +123,135 @@ section.topo-do-site.flex{
 /*ESTILOS DAS ESPECIALIDADES*/
 section.especialidades{
     padding: 40px 4%;
+}
+
+section.especialidades .flex{
+    
+}
+
+div.especialidades-box{
+    color: white !important;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 45px; 
+    transition: .2s;
+}
+
+div.especialidades-box:hover{
+    transform: scale(1.07);
+    box-shadow: 0 0 15px #999898;
+}
+
+div.especialidades-box i{
+    font-size: 60px;
+    color: rgb(7, 7, 155);
+}
+
+div.especialidades-box p{
+    font-size: 30px;
+}
+
+div.especialidades-box h3{
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+/*estilo de sobre*/
+section .sobre{
+    padding: 40px;
+}
+
+section .sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+div .txt-sobre{
+    padding: 5px;
+    color: #fff;
+    text-align: justify;
+}
+
+div .txt-sobre h2{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+div .txt-sobre h2 span{
+    color: rgb(7, 7, 155);
+    
+}
+
+div .txt-sobre p{
+    font-size: 20px;
+}
+
+div .txt-sobre button{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 0;
+    background-color: rgb(7, 7, 155);
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+/*ROSANA*/
+div .txt-sobre-2{
+    padding: 60px;
+    color: #fff;
+    text-align: justify;
+}
+
+div .txt-sobre-2 h2{
+    font-size: 30px;
+}
+
+div .txt-sobre-2 h2 span{
+    color: rgb(7, 7, 155);
+}
+
+div .txt-sobre p{
+    font-size: 20px;
+}
+
+div .txt-sobre-2 button{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 20px;
+    background-color: rgb(7, 7, 155);
+    border: 0;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+/*clara sales*/
+
+div .txt-sobre-3{
+    padding: 45px;
+    color: #fff;
+    text-align: justify;
+}
+
+div .txt-sobre-3 h2{
+    font-size: 30px;
+}
+
+div .txt-sobre-3 h2 span{
+    color: rgb(7, 7, 155);
+}
+
+div .txt-sobre-3 p{
+    font-size: 20px;
+}
+
+div .txt-sobre-3 button{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 0;
+    background-color: rgb(7, 7, 155);
+    font-size: 20px;
+    margin: 0 10px;
 }
