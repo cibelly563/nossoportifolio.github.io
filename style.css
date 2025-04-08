@@ -44,6 +44,7 @@ h2.titulo{
 h2.titulo span{
     color: rgb(7, 7, 155);
 }
+
 /*ESTILO DO CABEÇALHO*/
 header{
     padding: 40px 4%;
@@ -157,9 +158,9 @@ div.especialidades-box h3{
     margin: 15px 0;
 }
 
-/*estilo de sobre*/
+/*estilo de sobre cibelly*/
 section .sobre{
-    padding: 40px;
+    padding: 80px ;
 }
 
 section .sobre .flex{
@@ -194,6 +195,7 @@ div .txt-sobre button{
     background-color: rgb(7, 7, 155);
     font-size: 20px;
     margin: 0 10px;
+    cursor: pointer;
 }
 
 /*ROSANA*/
@@ -254,4 +256,20 @@ div .txt-sobre-3 button{
     background-color: rgb(7, 7, 155);
     font-size: 20px;
     margin: 0 10px;
+    cursor: pointer;
+}
+/*ESTILO DO PORTIFOLIO*/
+section.portifolio{
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #474242;
+}
+
+section .portifolio .flex{
+justify-content: space-around;
+}
+
+.img-port{
+    width: 360px;
+    height: 460px;
+    background-color: rgb(7, 7, 155);
 }
