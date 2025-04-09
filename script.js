@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Alerta de boas-vindas
-    alert("Bem-vindo ao nosso portfólio!");
+    alert("Seja bem-vindo ao nosso portfólio!");
 
     // Abrir redes sociais em nova aba
     const botoesRedes = document.querySelectorAll("button[data-link]");
@@ -10,3 +10,4 @@ document.addEventListener("DOMContentLoaded", () => {
             window.open(link, "_blank");
         });
     });
+});

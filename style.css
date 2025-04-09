@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: italic;
+    
 }
 body{
     background-color: black;
@@ -44,6 +45,45 @@ h2.titulo{
 h2.titulo span{
     color: rgb(7, 7, 155);
 }
+
+/*Menu navegação*/
+
+.menu-desktop ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .menu-desktop ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .menu-desktop ul li a:hover,
+  .menu-desktop ul li a.active {
+    color: rgb(7, 7, 155);
+  }
+  
+  .btn-menu-mobile {
+    display: none;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+  }
+  
+ 
+  @media (max-width: 768px) {
+    .menu-desktop {
+      display: none;
+    }
+  
+    .btn-menu-mobile {
+      display: block;
+    }
+  }
+  
 
 /*ESTILO DO CABEÇALHO*/
 header{
@@ -112,6 +152,20 @@ section.topo-do-site.flex{
     animation: flutuar 2s ease-in-out infinite alternate;
 }
 
+.img-topo-site {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .img-topo-site img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  
+
 
 @keyframes flutuar{
     0%{
@@ -126,9 +180,6 @@ section.especialidades{
     padding: 40px 4%;
 }
 
-section.especialidades .flex{
-    
-}
 
 div.especialidades-box{
     color: white !important;
@@ -157,6 +208,33 @@ div.especialidades-box h3{
     font-size: 30px;
     margin: 15px 0;
 }
+
+/*Estilo das img do sobre*/
+
+.sobre-item {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.sobre-item .img-sobre img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .sobre-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-item .img-sobre img {
+        margin: 0 auto;
+    }
+}
+
 
 /*estilo de sobre cibelly*/
 section .sobre{

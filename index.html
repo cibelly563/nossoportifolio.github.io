@@ -8,24 +8,29 @@
     <title>Nosso Portfólio</title>
 </head>
 <body>
+    <!-- Menu de navegação -->
     <header>
         <div class="interface">
-            <!-- Logo -->
-            <div class="logo">
-                <a href="#">
-                    <img src="imagens/logo.png" alt="Logo da Escola">
-                </a>
-            </div>
-
-            <!-- Menu de Navegação -->
-            <nav class="menu-desktop">
-                <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Especialidades</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Projetos</a></li>
-                </ul>
-            </nav>
+          <div class="logo">
+            <a href="#"><img src="imagens/logo.png" alt="Logo da Escola" /></a>
+          </div>
+          
+          <nav class="menu-desktop">
+            <ul>
+              <li><a href="#topo">Início</a></li>
+              <li><a href="#especialidades">Especialidades</a></li>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#portfolio">Projetos</a></li>
+              <li><a href="#formulario">Contato</a></li>
+            </ul>
+          </nav>
+      
+          <div class="btn-menu-mobile" id="btn-menu-mobile">
+            <i class="bi bi-list"></i>
+          </div>
+        </div>
+      </header>
+      
 
             <!-- Botão de Contato -->
             <div class="btn-contato">
@@ -38,7 +43,7 @@
 
     <main>
         <!-- Seção do Topo -->
-        <section class="topo-do-site">
+        <section class="topo-do-site" id="topo">
             <div class="interface">
                 <div class="flex">
                     <div class="txt-topo-site">
@@ -60,7 +65,7 @@
         </section>
 
         <!-- Seção de Especialidades -->
-        <section class="especialidades">
+        <section class="especialidades" id="especialidades">
             <div class="interface">
                 <h2 class="titulo">NOSSAS <span>ESPECIALIDADES</span></h2>
                 <div class="flex">
@@ -74,42 +79,53 @@
         </section>
 
         <!-- Seção de Sobre -->
-        <section class="sobre">
-            <div class="interface">
-                <div class="flex">
-                    <div class="img-sobre">
-                        <img src="imagens/cibelly.png" alt="Cibelly">
-                        <img src="imagens/rosana.png" alt="Rosana">
-                        <img src="imagens/clara.png" alt="Clara">
-                    </div>
-
-                    <div class="txt-sobre">
-                        <h2>MUITO PRAZER, <span>EU SOU CIBELLY.</span></h2>
-                        <p>sou estudante do ensino técnico. Estou dedicando meu tempo para adquirir conhecimentos práticos e teóricos que me prepararão para a carreira que desejo seguir. 
-                            Acredito que o ensino técnico é uma excelente oportunidade para desenvolver habilidades específicas e me tornar mais competitivo no mercado de trabalho. Estou animado(a) com as experiências que estou vivendo e com tudo que ainda vou aprender!</p>
-                        <div class="btn-social-1">
-                            <a href="https://www.instagram.com" target="_blank"><button><i class="bi bi-instagram"></i></button></a>
-                            <a href="https://wa.me/1234567890" target="_blank"><button><i class="bi bi-whatsapp"></i></button></a>
+        <section class="sobre" id="sobre">
+                    
+                    <div class="sobre-item">
+                        <div class="img-sobre">
+                            <img src="imagens/cibelly.png" alt="Cibelly">
+                        </div>
+                        <div class="txt-sobre">
+                            <h2>MUITO PRAZER, <span>EU SOU CIBELLY.</span></h2>
+                            <p>Sou estudante do ensino técnico. Estou dedicando meu tempo para adquirir conhecimentos práticos e teóricos que me prepararam para a carreira que desejo seguir.
+                            </p>
+                            <div class="btn-social-1">
+                                <a href="#"><button><i class="bi bi-instagram"></i></button></a>
+                                <a href="#"><button><i class="bi bi-whatsapp"></i></button></a>
+                            </div>
                         </div>
                     </div>
+                    
 
-                    <div class="txt-sobre-2">
-                        <h2>MUITO PRAZER, <span>EU SOU ROSANA.</span></h2>
-                        <p>sou estudante de Informática, tenho como objetvo adquirir aprendizado o suficiente sobre técnologia para no fim concluir o ensino médio, e realizar todos meus sonhos e objetivos de vida. "A ideia é nunca perder a motivação para subir cada degrau rumo ao sucesso, por mais difícil que seja. E também não esquecer de agradecer pelas lições aprendidas em cada etapa da jornada."</p>
-                        <div class="btn-social-2">
-                            <a href="https://www.instagram.com" target="_blank"><button><i class="bi bi-instagram"></i></button></a>
-                            <a href="https://wa.me/1234567890" target="_blank"><button><i class="bi bi-whatsapp"></i></button></a>
+                    <div class="sobre-item">
+                        <div class="img-sobre">
+                            <img src="imagens/rosana.png" alt="Cibelly">
+                        </div>
+                        <div class="txt-sobre-2">
+                            <h2>MUITO PRAZER, <span>EU SOU ROSANA.</span></h2>
+                            <p>Sou estudante de Informática, tenho como objetivo adquirir aprendizado o suficiente sobre tecnologia para no fim concluir o ensino médio, e realizar todos meus sonhos e objetivos de vida. "A ideia é nunca perder a motivação para subir cada degrau rumo ao sucesso, por mais difícil que seja. E também não esquecer de agradecer pelas lições aprendidas em cada etapa da jornada."</p>
+                            <div class="btn-social-2">
+                                <a href="#"><button><i class="bi bi-instagram"></i></button></a>
+                                <a href="#"><button><i class="bi bi-whatsapp"></i></button></a>
+                            </div>
                         </div>
                     </div>
+                    
 
-                    <div class="txt-sobre-3">
-                        <h2>MUITO PRAZER, <span> EU SOU CLARA SALES.</span></h2>
-                        <p>Sou uma estudante de informatica determinada, acredito muito em valores como ética, respeito e responsabilidade. Vejo na tecnologia um grande potencial para transformar o mundo e fazer o bem. Acredito que, quando usada de forma consciente e responsável, a tecnologia pode ser uma ferramenta poderosa para resolver problemas, conectar pessoas e criar um futuro mais justo e inovador. Estou sempre buscando aprender mais e contribuir para algo positivo!</p>
-                        <div class="btn-social-3">
-                            <a href="https://www.instagram.com" target="_blank"><button><i class="bi bi-instagram"></i></button></a>
-                            <a href="https://wa.me/1234567890" target="_blank"><button><i class="bi bi-whatsapp"></i></button></a>
+                    <div class="sobre-item">
+                        <div class="img-sobre">
+                            <img src="imagens/clara.png" alt="Cibelly">
+                        </div>
+                        <div class="txt-sobre-3">
+                            <h2>MUITO PRAZER, <span>EU SOU CLARA.</span></h2>
+                            <p>Sou uma estudante de informática determinada, acredito muito em valores como ética, respeito e responsabilidade. Vejo na tecnologia um grande potencial para transformar o mundo e fazer o bem. Acredito que, quando usada de forma consciente e responsável, a tecnologia pode ser uma ferramenta poderosa para resolver problemas, conectar pessoas e criar um futuro mais justo e inovador. Estou sempre buscando aprender mais e contribuir para algo positivo!</p>
+                            <div class="btn-social-3">
+                                <a href="#"><button><i class="bi bi-instagram"></i></button></a>
+                                <a href="#"><button><i class="bi bi-whatsapp"></i></button></a>
+                            </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </section>
@@ -117,7 +133,7 @@
         <!-- Seção de Portfólio -->
         <section class="portfolio">
             <div class="interface">
-                <h2 class="titulo">MEU <span>PORTFÓLIO</span></h2>
+                <h2 class="titulo">NOSSOS <span>PROJETOS</span></h2>
                 <div class="flex">
                     <div class="img-port" style="background-image:url(imagens/destino.png);">
                         <div class="overlay">Projeto 1</div>
