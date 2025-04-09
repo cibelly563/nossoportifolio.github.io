@@ -258,75 +258,183 @@ div .txt-sobre-3 button{
     margin: 0 10px;
     cursor: pointer;
 }
-/*ESTILO DO PORTIFOLIO*/
-section.portifolio{
+/* ESTILO DO PORTIFÓLIO */
+section.portfolio {
     padding: 80px 4%;
-    box-shadow: 0 0 40px 10px #474242;
+    box-shadow: 0 0 40px 10px rgba(71, 66, 66, 0.6); /* Sombra mais suave */
+    background-color: #111; /* Fundo escuro para destacar imagens */
+    color: #fff; /* Cor do texto para contraste */
 }
 
-section .portfolio .flex{
-justify-content: space-around;
-margin-top: 60px;
+section.portfolio .flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 60px;
 }
 
-div .img-port{
+div.img-port {
     width: 360px;
     height: 460px;
     background-size: cover;
-    background-position: 100% 0%;
-    transition: 8s;
+    background-position: center;
+    transition: transform 0.3s ease-in-out, background-position 0.3s ease-in-out;
     cursor: pointer;
-    border-radius: 40px;
+    border-radius: 20px; /* Borda arredondada mais suave */
     position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra ao redor para dar profundidade */
 }
- .img-port:hover{
-    background-position: 100% 100%;
+
+div.img-port:hover {
+    transform: scale(1.05); /* Efeito de zoom suave ao passar o mouse */
+    background-position: center center; /* Melhora a transição de imagem */
 }
-.overlay{
-    position:absolute;
+
+.overlay {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 40px;
+    background: rgba(0, 0, 0, 0.4); /* Fundo do overlay mais escuro */
     opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 20px;
 }
-/*ESTILO DO FORMULARIO CONTATO*/
-section.formulario{
+
+div.img-port:hover .overlay {
+    opacity: 1; /* Exibe o overlay ao passar o mouse */
+}
+
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    opacity: 0; /* Esconde o conteúdo até o hover */
+    transition: opacity 0.3s ease-in-out;
+}
+
+div.img-port:hover .overlay-content {
+    opacity: 1; /* Exibe o conteúdo ao passar o mouse */
+}
+
+/* Responsividade - Ajuste para telas menores */
+@media (max-width: 1024px) {
+    section.portfolio .flex {
+        justify-content: center; /* Centraliza os itens em telas menores */
+    }
+
+    div.img-port {
+        width: 300px;
+        height: 400px; /* Ajusta o tamanho das imagens em telas menores */
+    }
+}
+
+@media (max-width: 768px) {
+    div.img-port {
+        width: 100%; /* Deixa as imagens ocuparem toda a largura em dispositivos móveis */
+        height: 300px; /* Ajusta a altura das imagens para caber melhor na tela */
+    }
+
+    .overlay-content {
+        font-size: 20px; /* Ajusta o tamanho do texto no overlay */
+    }
+
+}
+/* ESTILO DO FORMULÁRIO DE CONTATO */
+section.formulario {
     padding: 80px 4%;
+    background-color: #111; /* Fundo escuro para destacar o formulário */
+    color: #fff; /* Cor do texto para contraste */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra suave ao redor */
 }
-form{
+
+/* Estilo do Formulário */
+form {
     max-width: 500px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     margin-top: 40px;
+    background-color: #1f1f1f; /* Fundo ligeiramente mais claro para o formulário */
+    padding: 30px;
+    border-radius: 15px;
 }
-form input, form textarea{
+
+/* Estilo dos Inputs e Textarea */
+form input, form textarea {
     width: 100%;
     background-color: #242424;
-    border: 0;
-    outline: 0;
+    border: none;
+    outline: none;
     padding: 20px 15px;
     border-radius: 15px;
     color: #fff;
     font-size: 18px;
+    transition: background-color 0.2s ease; /* Transição suave para o fundo */
 }
-form textarea{
+
+form input:focus, form textarea:focus {
+    background-color: #333; /* Altera a cor do fundo quando o input está em foco */
+}
+
+/* Ajustes no Textarea */
+form textarea {
     resize: none;
     max-height: 200px;
 }
-form .btn-enviar{
+
+/* Estilo do Botão de Enviar */
+form .btn-enviar {
     margin-top: 20px;
     text-align: center;
 }
-form .btn-enviar input{
-    width: 120px;
+
+form .btn-enviar input {
+    width: 150px;
+    padding: 12px 20px;
     background-color: rgb(7, 7, 155);
-    color: #000;
+    color: #fff;
     font-weight: 700;
     cursor: pointer;
-    transition: .2s;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Efeitos suaves */
+}
+
+form .btn-enviar input:hover {
+    background-color: rgb(35, 35, 253);
+    transform: scale(1.05); /* Efeito de zoom no botão */
+}
+
+form .btn-enviar input:active {
+    transform: scale(0.98); /* Efeito de click */
+}
+
+/* Responsividade - Ajuste para telas menores */
+@media (max-width: 768px) {
+    section.formulario {
+        padding: 60px 20px; /* Menos padding em telas menores */
+    }
+
+    form {
+        width: 100%; /* Formulário ocupa toda a largura */
+        padding: 20px; /* Reduz o padding do formulário em telas menores */
+    }
+
+    form .btn-enviar input {
+        width: 100%; /* O botão ocupa 100% da largura em telas menores */
+        font-size: 16px; /* Tamanho de fonte um pouco menor para telas pequenas */
+    }
 }
