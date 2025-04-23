@@ -1,0 +1,27 @@
+<!DOCTYPE html>  <!--Fonte :https://youtu.be/gekJwNUaq0E?si=slad7U1ogm0aOKXE-->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Logs de Atividades</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="formulario">
+        <div class="interface">
+            <h2 class="titulo">LOGS DE <span>ATIVIDADES</span></h2>
+            <div id="log-container" style="color: white; background-color: #1f1f1f; padding: 20px; border-radius: 15px;"></div>
+        </div>
+    </section>
+
+    <script>
+        const logContainer = document.getElementById("log-container");
+        const logs = JSON.parse(localStorage.getItem("logs") || "[]");
+
+        if (logs.length === 0) {
+            logContainer.innerHTML = "<p>Nenhuma atividade registrada ainda.</p>";
+        } else {
+            logContainer.innerHTML = "<ul>" + logs.map(log => `<li>${log}</li>`).join("") + "</ul>";
+        }
+    </script>
+</body>
+</html>

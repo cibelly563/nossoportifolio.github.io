@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastra</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        alert("Cadastre-se para mandar uma mensagem");
+        const nome = escaparHTML(document.getElementById("nome").value);
+    </script>
+</head>
+<body>
+    
+    <a href="index.html"><button class="Voltar" style="
+        font-size: 16px;
+        text-align: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        ">
+            Voltar
+        </button></a>
+
+    <section class="formulario" id="formulario">
+        <div class="interface">
+            <h2 class="titulo">FALE <span>CONOSCO</span></h2>
+            <form id="form-cadastro">
+                <input type="text" name="nome" id="nome" placeholder="Seu nome completo..." required>
+                <input type="email" name="email" placeholder="Seu e-mail..." required>
+                <input type="password" name="senha" id="senha" placeholder="Sua senha..." required>
+                <input type="password" name="confirmarSenha" id="confirmarSenha" placeholder="Confirme sua senha..." required>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

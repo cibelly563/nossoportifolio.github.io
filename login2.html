@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const nome = escaparHTML(document.getElementById("login-nome").value);
+    </script>
+</head>
+<body>
+
+    <a href="index.html"><button class="Voltar" style="
+        font-size: 16px;
+        text-align: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        ">
+            Voltar
+        </button></a>
+
+    <section class="formulario">
+        <div class="interface">
+            <h2 class="titulo">FAÇA <span>LOGIN</span></h2>
+            <form id="form-login">
+                <input type="text" id="login-nome" placeholder="Digite seu nome" required>
+                <input type="password" id="login-senha" placeholder="Digite sua senha" required>
+                <div class="btn-enviar">
+                    <input type="submit" value="Entrar">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    
+    <script>
+        async function hashSenha(senha) {
+            const encoder = new TextEncoder();
+            const data = encoder.encode(senha);
+            const hash = await crypto.subtle.digest("SHA-256", data);
+            return Array.from(new Uint8Array(hash))
+                .map(b => b.toString(16).padStart(2, "0"))
+                .join("");
+        }
+
+        function registrarLog(acao) {
+            const logs = JSON.parse(localStorage.getItem("logs") || "[]");
+            const data = new Date().toLocaleString();
+            logs.push(`[${data}] - ${acao}`);
+            localStorage.setItem("logs", JSON.stringify(logs));
+        }
+
+        document.getElementById("form-login").addEventListener("submit", async function(e) {
+            e.preventDefault();
+
+            const nome = document.getElementById("login-nome").value;
+            const senha = document.getElementById("login-senha").value;
+
+            const nomeSalvo = localStorage.getItem("usuario");
+            const senhaHashSalva = localStorage.getItem("senhaHash");
+
+            if (nome === nomeSalvo && await hashSenha(senha) === senhaHashSalva) {
+                registrarLog("Login realizado pelo usuário: " + nome);
+                alert("Login realizado com sucesso!");
+                window.location.href = "mensagem.html";
+            } else {
+                alert("Usuário ou senha incorretos.");
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,18 +1,22 @@
-*{
+*{            /*Fonte usada de referencia no css: https://youtu.be/3v2RUozpDVw?si=jIT_ClST_8c8t8be*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: italic;
+    font-family: Arial, Helvetica, sans-serif;
     
 }
 body{
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     height: 100vh;
 }
-.interface{
+
+
+.interface {
     max-width: 1280px;
     margin: 0 auto;
+    padding: 0 20px;
 }
+
 .flex{
     display: flex;
 }
@@ -30,12 +34,19 @@ button{
     padding: 10px 40px;
     font-size: 30px;
     font-weight: 600;
-    background-color: rgb(7, 7, 155);
+    background-color: rgb(0, 0, 143);
+    color: white;
     border: 0;
     border-radius: 30px;
     cursor: pointer;
     transition: .2s;
     margin: 15px;
+}
+.btn-contato button {
+    padding: 8px 20px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 20px;
 }
 h2.titulo{
     color: #fff;
@@ -48,6 +59,42 @@ h2.titulo span{
 }
 
 /*Menu navegação*/
+
+
+.menu-mobile {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 1000; /* Garante que ele apareça sobre outros elementos */
+    cursor: pointer;
+}
+
+.menu-mobile ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-mobile ul li {
+    padding: 10px 0;
+}
+
+.menu-mobile ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-mobile ul li a:hover {
+    color: rgb(7, 7, 155);
+}
+
+
+
 
 .menu-desktop ul {
     list-style: none;
@@ -156,19 +203,29 @@ section.topo-do-site.flex{
 
 .img-topo-site {
     display: flex;
+    flex-direction: row;
+    align-items: center;
     gap: 20px;
-    flex-wrap: wrap;
+    display: flex;
+    justify-content: center; /* Alinha as imagens horizontalmente no centro */
+         
+  }
+  
+  .img-topo-site2 {
+    display: contents;
+    gap: 20px;
     justify-content: center;
+    flex-wrap: wrap;
   }
   
   .img-topo-site img {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
+    object-fit: cover;
+    
   }
   
-
-
 @keyframes flutuar{
     0%{
         top: 0;
@@ -177,6 +234,10 @@ section.topo-do-site.flex{
         top: 30px;
     }
 }
+
+
+
+
 /*ESTILOS DAS ESPECIALIDADES*/
 section.especialidades{
     padding: 40px 4%;
@@ -238,6 +299,7 @@ div.especialidades-box h3{
 }
 
 
+
 /*estilo de sobre cibelly*/
 section .sobre{
     padding: 60px ;
@@ -247,6 +309,8 @@ div .txt-sobre{
     padding: 5px;
     color: #fff;
     text-align: justify;
+    padding-right: 30px;
+    padding-left: 30px;
 }
 
 div .txt-sobre h2{
@@ -263,82 +327,26 @@ div .txt-sobre p{
 }
 
 div .txt-sobre button{
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     border: 0;
     background-color: rgb(7, 7, 155);
     font-size: 20px;
     margin: 0 10px;
     cursor: pointer;
+    padding: 8px 20px;
+    padding-top: 10px;
 }
 
-/*ROSANA*/
-div .txt-sobre-2{
-    padding: 60px;
-    color: #fff;
-    text-align: justify;
-}
 
-div .txt-sobre-2 h2{
-    font-size: 25px;
-}
 
-div .txt-sobre-2 h2 span{
-    color: rgb(7, 7, 155);
-}
-
-div .txt-sobre-2 p{
-    font-size: 30px;
-}
-
-div .txt-sobre-2 button{
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    font-size: 20px;
-    background-color: rgb(7, 7, 155);
-    border: 0;
-    cursor: pointer;
-    margin: 0 10px;
-}
-
-/*clara sales*/
-
-div .txt-sobre-3{
-    padding: 45px;
-    color: #fff;
-    text-align: justify;
-}
-
-div .txt-sobre-3 h2{
-    font-size: 30px;
-}
-
-div .txt-sobre-3 h2 span{
-    color: rgb(7, 7, 155);
-}
-
-div .txt-sobre-3 p{
-    font-size: 25px;
-}
-
-div .txt-sobre-3 button{
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: 0;
-    background-color: rgb(7, 7, 155);
-    font-size: 20px;
-    margin: 0 10px;
-    cursor: pointer;
-}
 /* ESTILO DO PORTIFÓLIO */
 section.portfolio {
     padding: 80px 4%;
-    box-shadow: 0 0 40px 10px rgba(71, 66, 66, 0.6); /* Sombra mais suave */
-    background-color: #111; /* Fundo escuro para destacar imagens */
-    color: #fff; /* Cor do texto para contraste */
+    box-shadow: 0 0 40px 10px rgba(71, 66, 66, 0.6); 
+    background-color: #030225; 
+    color: #fff; 
 }
 
 section.portfolio .flex {
@@ -350,21 +358,27 @@ section.portfolio .flex {
 }
 
 div.img-port {
-    width: 360px;
-    height: 460px;
-    background-size: contain; /* Agora a imagem se ajusta dentro do contêiner sem cortar */
-    background-position: center;
+    width: 570px;
+    height: 360px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     transition: transform 0.3s ease-in-out, background-position 0.3s ease-in-out;
     cursor: pointer;
-    border-radius: 20px; /* Borda arredondada mais suave */
+    border-radius: 20px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra ao redor para dar profundidade */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);  
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
 }
 
+
+
 div.img-port:hover {
-    transform: scale(1.05); /* Efeito de zoom suave ao passar o mouse */
-    background-position: center center; /* Melhora a transição de imagem */
+    transform: scale(1.05); 
+    background-position: center center; 
 }
 
 .overlay {
@@ -373,14 +387,15 @@ div.img-port:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Fundo do overlay mais escuro */
+    background: rgba(0, 0, 0, 0.4); 
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     border-radius: 20px;
+    
 }
 
 div.img-port:hover .overlay {
-    opacity: 1; /* Exibe o overlay ao passar o mouse */
+    opacity: 1; 
 }
 
 .overlay-content {
@@ -392,34 +407,34 @@ div.img-port:hover .overlay {
     font-size: 24px;
     text-align: center;
     font-weight: bold;
-    opacity: 0; /* Esconde o conteúdo até o hover */
+    opacity: 0; 
     transition: opacity 0.3s ease-in-out;
 }
 
 div.img-port:hover .overlay-content {
-    opacity: 1; /* Exibe o conteúdo ao passar o mouse */
+    opacity: 1; 
 }
 
-/* Responsividade - Ajuste para telas menores */
+
 @media (max-width: 1024px) {
     section.portfolio .flex {
-        justify-content: center; /* Centraliza os itens em telas menores */
+        justify-content: center; 
     }
 
     div.img-port {
         width: 300px;
-        height: 400px; /* Ajusta o tamanho das imagens em telas menores */
+        height: 400px; 
     }
 }
 
 @media (max-width: 768px) {
     div.img-port {
-        width: 100%; /* Deixa as imagens ocuparem toda a largura em dispositivos móveis */
-        height: 300px; /* Ajusta a altura das imagens para caber melhor na tela */
+        width: 100%; 
+        height: 300px; 
     }
 
     .overlay-content {
-        font-size: 20px; /* Ajusta o tamanho do texto no overlay */
+        font-size: 20px;
     }
 
 }
@@ -427,10 +442,10 @@ div.img-port:hover .overlay-content {
 /* ESTILO DO FORMULÁRIO DE CONTATO */
 section.formulario {
     padding: 80px 4%;
-    background-color: #111; /* Fundo escuro para destacar o formulário */
-    color: #fff; /* Cor do texto para contraste */
+    background-color: #111; 
+    color: #fff; 
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra suave ao redor */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilo do Formulário */
@@ -442,7 +457,7 @@ form {
     flex-direction: column;
     gap: 15px;
     margin-top: 40px;
-    background-color: #1f1f1f; /* Fundo ligeiramente mais claro para o formulário */
+    background-color: #1f1f1f; 
     padding: 30px;
     border-radius: 15px;
 }
@@ -457,11 +472,11 @@ form input, form textarea {
     border-radius: 15px;
     color: #fff;
     font-size: 18px;
-    transition: background-color 0.2s ease; /* Transição suave para o fundo */
+    transition: background-color 0.2s ease; 
 }
 
 form input:focus, form textarea:focus {
-    background-color: #333; /* Altera a cor do fundo quando o input está em foco */
+    background-color: #333; 
 }
 
 /* Ajustes no Textarea */
@@ -491,26 +506,96 @@ form .btn-enviar input {
 
 form .btn-enviar input:hover {
     background-color: rgb(35, 35, 253);
-    transform: scale(1.05); /* Efeito de zoom no botão */
+    transform: scale(1.05); 
 }
 
 form .btn-enviar input:active {
-    transform: scale(0.98); /* Efeito de click */
+    transform: scale(0.98); 
 }
 
-/* Responsividade - Ajuste para telas menores */
-@media (max-width: 768px) {
+
+@media (max-width: 768px) { /*Fonte: https://youtu.be/gekJwNUaq0E?si=slad7U1ogm0aOKXE*/
     section.formulario {
-        padding: 60px 20px; /* Menos padding em telas menores */
+        padding: 60px 20px; 
     }
 
     form {
-        width: 100%; /* Formulário ocupa toda a largura */
-        padding: 20px; /* Reduz o padding do formulário em telas menores */
+        width: 100%; 
+        padding: 20px; 
     }
 
     form .btn-enviar input {
-        width: 100%; /* O botão ocupa 100% da largura em telas menores */
-        font-size: 16px; /* Tamanho de fonte um pouco menor para telas pequenas */
+        width: 100%;
+        font-size: 16px; 
+    }
+
+    .topo-do-site .flex {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .topo-do-site .txt-topo-site p {
+        font-size: 20px;
+    }
+
+    .topo-do-site h1 {
+        font-size: 32px;
+    }
+
+    .btn-contato {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-contato button {
+        width: 100%;
+        margin: 5px 0;
+    }
+   
+}
+
+@media screen and (max-width: 900px) {  /*Fonte: https://youtu.be/V-_esdbwgbA?si=1kcEJa9jxJhjNTWw*/
+    .flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-item {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 40px;
+        
+    }
+
+    .sobre-item .img-sobre img {
+        margin: 0 auto 20px;
+        
+    }
+
+    .menu-desktop,
+    .btn-contato {
+        display: none;
+    }
+
+    .btn-menu-mobile {
+        display: block;
+    }
+
+    #texto {
+        font-size: 20px;
+
+    }
+
+    #texto2 {
+        font-size: 20px;
+
+    }
+
+    .img-topo-site img {
+        width: 120px;
+        height: 120px;
+        margin: 0%;
+
     }
 }

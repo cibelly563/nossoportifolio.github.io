@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!--Fonte de referencia usada no html: https://youtu.be/3v2RUozpDVw?si=jIT_ClST_8c8t8be-->
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -6,38 +6,62 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Nosso Portfólio</title>
+
+    
 </head>
 <body>
     <!-- Menu de navegação -->
     <header>
         <div class="interface">
-          <div class="logo">
-            <a href="#"><img src="imagens/logo.png" alt="Logo da Escola" /></a>
-          </div>
-          
-          <nav class="menu-desktop">
-            <ul>
-              <li><a href="#topo">Início</a></li>
-              <li><a href="#especialidades">Especialidades</a></li>
-              <li><a href="#sobre">Sobre</a></li>
-              <li><a href="#portfolio">Projetos</a></li>
-              <li><a href="#formulario">Contato</a></li>
-            </ul>
-          </nav>
-      
-          <div class="btn-menu-mobile" id="btn-menu-mobile">
-            <i class="bi bi-list"></i>
-          </div>
-        </div>
-      </header>
-      
-
-            <!-- Botão de Contato -->
-            <div class="btn-contato">
-                <a href="#formulario">
-                    <button>Contato</button>
-                </a>
+            <div class="logo">
+                <a href="#"><img src="imagens/logo.png" alt="Logo da Escola" /></a>
             </div>
+    
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="#topo">Início</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#portfolio">Projetos</a></li>
+                    <li><a href="cadastro.html">Contato</a></li>
+                </ul>
+            </nav>
+    
+            <div class="btn-menu-mobile" id="btn-menu-mobile">
+                <i class="bi bi-list"></i>
+            </div>
+    
+            <div class="menu-mobile">
+                <ul>
+                    <a href="index.html"><button class="Voltar" style="
+                        font-size: 16px;
+                        text-align: center;
+                        justify-content: center;
+                        width: 20px;
+                        height: 20px;
+                        display: flex;
+                        align-items: center;
+                        ">
+                            Voltar
+                        </button></a>
+                    <li><a href="#topo">Início</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#portfolio">Projetos</a></li>
+                    <li><a href="cadastro.html">Contato</a></li>
+                </ul>
+            </div>
+    
+        </div>
+    
+        <div class="btn-contato">
+            <a href="cadastro2.html">
+                <button>Cadastrar</button>
+            </a>
+            <a href="login.html">
+                <button>Entrar</button>
+            </a>
+        </div>
         </div>
     </header>
 
@@ -50,15 +74,14 @@
                         <h1>BEM-VINDOS AO NOSSO PORTFÓLIO<span>!</span></h1>
                         <p>Estamos juntas nessa jornada, explorando o mundo do design, da arte e da tecnologia. 
                         Este portfólio é uma vitrine do que temos feito até agora e um espaço para compartilhar nossas ideias.</p>
-                        <a href="#formulario">
-                            <button>Entre em contato</button>
-                        </a>
+                       
                     </div>
 
                     <div class="img-topo-site">
-                        <img src="imagens/rosana.png" alt="Rosana">
-                        <img src="imagens/cibelly.png" alt="Cibelly">
-                        <img src="imagens/clara.png" alt="Mº Clara Sº">
+                            <img src="imagens/rosana.png" alt="Rosana" id="img">
+                            <img src="imagens/cibelly.png" alt="Cibelly" id="img">
+                            <img src="imagens/clara.png" alt="Mº Clara Sº" class="clara" id="img">
+                        
                     </div>
                 </div>
             </div>
@@ -67,63 +90,65 @@
         <!-- Seção de Especialidades -->
         <section class="especialidades" id="especialidades">
             <div class="interface">
-                <h2 class="titulo">NOSSAS <span>ESPECIALIDADES</span></h2>
+   
                 <div class="flex">
                     <div class="especialidades-box">
                         <i class="bi bi-pc-display-horizontal"></i>
                         <h3>TÉC INFORMÁTICA</h3>
-                        <p>Somos um grupo de estudantes dedicadas à área de informática, sempre em busca de conhecimento e inovação. Nossas especialidades incluem programação, design gráfico e segurança da informação. Estamos comprometidos em aprender e aplicar técnicas modernas para criar soluções criativas e eficientes.</p>
+                        <p id="texto"> Somos um grupo de estudantes dedicadas à área de informática, sempre em busca de conhecimento e inovação. Nossas especialidades incluem programação, design gráfico e segurança da informação. Estamos comprometidos em aprender e aplicar técnicas modernas para criar soluções criativas e eficientes.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        
+
+     
+        
         <!-- Seção de Sobre -->
         <section class="sobre" id="sobre">
                     
                     <div class="sobre-item">
                         <div class="img-sobre">
-                            <img src="imagens/cibelly.png" alt="Cibelly">
+                            <img src="imagens/cibelly.png" alt="Cibelly" id="imgs">
                         </div>
                         <div class="txt-sobre">
                             <h2>MUITO PRAZER, <span>EU SOU CIBELLY.</span></h2>
-                            <p>Sou estudante do ensino técnico. Estou dedicando meu tempo para adquirir 
+                            <p id="texto2">Sou estudante do ensino técnico. Estou dedicando meu tempo para adquirir 
                             conhecimentos práticos e teóricos que me prepararam para a carreira que desejo seguir.
                             </p>
                             <div class="btn-social-1">
-                                <a href="#"><button><i class="bi bi-instagram"></i></button></a>
-                                <a href="#"><button><i class="bi bi-whatsapp"></i></button></a>
-                            </div>
+                                <button data-link="https://instagram.com"><i class="bi bi-instagram"></i></button>
+                                  </div> 
+                              
                         </div>
                     </div>
                     
 
                     <div class="sobre-item">
                         <div class="img-sobre">
-                            <img src="imagens/rosana.png" alt="Cibelly">
+                            <img src="imagens/rosana.png" alt="Rosana" id="imgs">
                         </div>
-                        <div class="txt-sobre-2">
+                        <div class="txt-sobre">
                             <h2>MUITO PRAZER, <span>EU SOU ROSANA.</span></h2>
-                            <p>Sou estudante de Informática, tenho como objetivo adquirir aprendizado o suficiente sobre tecnologia para no fim concluir o ensino médio, e realizar todos meus sonhos e objetivos de vida. "A ideia é nunca perder a motivação para subir cada degrau rumo ao sucesso, por mais difícil que seja. E também não esquecer de agradecer pelas lições aprendidas em cada etapa da jornada."</p>
+                            <p id="texto2">Sou estudante de Informática, tenho como objetivo adquirir aprendizado o suficiente sobre tecnologia para no fim concluir o ensino médio, e realizar todos meus sonhos e objetivos de vida. "A ideia é nunca perder a motivação para subir cada degrau rumo ao sucesso, por mais difícil que seja. E também não esquecer de agradecer pelas lições aprendidas em cada etapa da jornada."</p>
                             <div class="btn-social-2">
-                                <a href="#"><button><i class="bi bi-instagram"></i></button></a>
-                                <a href="#"><button><i class="bi bi-whatsapp"></i></button></a>
-                            </div>
+                                <button data-link="https://instagram.com"><i class="bi bi-instagram"></i></button>
+                                 </div>
                         </div>
                     </div>
                     
 
                     <div class="sobre-item">
                         <div class="img-sobre">
-                            <img src="imagens/clara.png" alt="Cibelly">
+                            <img src="imagens/clara.png" alt="Clara" id="imgs">
                         </div>
-                        <div class="txt-sobre-3">
+                        <div class="txt-sobre">
                             <h2>MUITO PRAZER, <span>EU SOU CLARA.</span></h2>
-                            <p>Sou uma estudante de informática determinada, acredito muito em valores como ética, respeito e responsabilidade. Vejo na tecnologia um grande potencial para transformar o mundo e fazer o bem. Acredito que, quando usada de forma consciente e responsável, a tecnologia pode ser uma ferramenta poderosa para resolver problemas, conectar pessoas e criar um futuro mais justo e inovador. Estou sempre buscando aprender mais e contribuir para algo positivo!</p>
+                            <p id="texto2">Sou uma estudante de informática. Vejo na tecnologia uma forma de transformar o mundo e fazer o bem se usada de forma consciente e responsável, pode ser uma ferramenta poderosa para resolver problemas. Por isso estou sempre buscando aprender mais e contribuir para algo positivo!</p>
                             <div class="btn-social-3">
-                                <a href="#"><button><i class="bi bi-instagram"></i></button></a>
-                                <a href="#"><button><i class="bi bi-whatsapp"></i></button></a>
-                            </div>
+                                <button data-link="https://instagram.com"><i class="bi bi-instagram"></i></button>
+                                </div>
                         </div>
                     </div>
                     
@@ -131,40 +156,46 @@
             </div>
         </section>
 
+
+     
+
         <!-- Seção de Portfólio -->
-        <section class="portfolio">
+        <section class="portfolio" id="portifolio">
             <div class="interface">
                 <h2 class="titulo">NOSSOS <span>PROJETOS</span></h2>
                 <div class="flex">
                     <div class="img-port" style="background-image:url(imagens/seudestino.png);">
-                        <div class="overlay">Projeto 1</div>
+                            <a href="https://clara-sales.github.io/Clara-Salas.github.io/"><div class="overlay">Projeto 1</div></a>
                     </div>
-
-                    <div class="img-port" style="background-image: url(imagens/arishop.png);">
+                   <a href="https://cibelly563.github.io/Calculadora.github.io/"><div class="img-port" style="background-image: url(imagens/calculadora.png);">
                         <div class="overlay">Projeto 2</div>
                     </div>
+                   </a>
+                   
+            </div>
 
-                    <div class="img-port" style="background-image: url(imagens/destino.png);">
-                        <div class="overlay">Projeto 3</div>
-                    </div>
+            <div class="flex">
+                <div class="especialidades-box">
+                    <i class="bi bi-pc-display-horizontal"></i>
+                    <h3>Gostou dos nossos projetos?</h3>
+                    <p id="texto"> Deseja entrar em contato conosco para saber mais sobre nossas habilidades, ideias e o que podemos criar juntas! Estamos prontas para colaborar e mostrar todo o nosso potencial. 💡✨.</p>
                 </div>
             </div>
+            <div style="text-align: center">
+                <a href="cadastro.html">
+                <button>Entre em contato</button>
+                </a>
+            </div>
+
         </section>
 
-        <!-- Seção de Formulário de Contato -->
-        <section class="formulario" id="formulario">
-            <div class="interface">
-                <h2 class="titulo">FALE <span>CONOSCO</span></h2>
-                <form action="">
-                    <input type="text" name="nome" id="nome" placeholder="Seu nome completo" required>
-                    <input type="email" name="email" id="email" placeholder="Seu e-mail" required>
-                    <input type="text" name="celular" id="celular" placeholder="Seu celular">
-                    <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem" required></textarea>
-                    <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
-                </form>
-            </div>
-        </section>
+        
     </main>
+
+    <footer style="text-align: center; padding: 40px 0; color: #fff;">
+        <p>Nosso Portfólio | <a href="privacidade.html" style="color: rgb(7, 7, 155); text-decoration: none;">Política de Privacidade</a></p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

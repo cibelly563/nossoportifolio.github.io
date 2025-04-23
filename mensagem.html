@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envie sua Mensagem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="index.html"><button class="Voltar" style="
+        font-size: 16px;
+        text-align: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        ">
+            Voltar
+        </button></a>
+    <section class="formulario">
+        <div class="interface">
+            <h2 class="titulo">ENVIE <span>SUA MENSAGEM</span></h2>
+            <form action="https://formsubmit.co/contaescolamariaclara@gmail.com" method="POST">
+                <input type="text" placeholder="Seu nome completo..." required>
+                <input type="email" placeholder="Seu e-mail..." required>
+                <textarea placeholder="Sua mensagem..." required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const logs = JSON.parse(localStorage.getItem("logs") || "[]");
+            logs.push(`[${new Date().toLocaleString()}] - Página de mensagem acessada`);
+            localStorage.setItem("logs", JSON.stringify(logs));
+        });
+
+
+    </script>    
+</body>
+</html>
+
