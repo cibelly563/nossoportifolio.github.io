@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     });
 
-    // CRIPTOGRAFIA SENHA //      Fonte:https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API
+    // CRIPTOGRAFIA SENHA  Fonte:https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API
+
     async function hashSenha(senha) {
         const encoder = new TextEncoder();
         const data = encoder.encode(senha);
@@ -27,29 +28,16 @@ document.addEventListener("DOMContentLoaded", async () => {
         localStorage.setItem("logs", JSON.stringify(logs));
     }
 
-    // CADASTRO //      Fonte:https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
+    // CADASTRO   Fonte:https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
+
     const formCadastro = document.getElementById("form-cadastro");
     if (formCadastro) {
         formCadastro.addEventListener("submit", async function (e) {
             e.preventDefault();
 
-            // Proteção contra XSS // Fonte:https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting
-            function escaparHTML(texto) {
-                const div = document.createElement('div');
-                div.textContent = texto;
-                return div.innerHTML;
-            }
-
-            const nome = escaparHTML(document.getElementById("nome").value);
-            const email = document.getElementById("email").value;
+            const nome = document.getElementById("nome").value;
             const senha = document.getElementById("senha").value;
             const confirmar = document.getElementById("confirmarSenha").value;
-
-            // Validação básica
-            if (!email.includes("@")) {
-                alert("Por favor, insira um e-mail válido.");
-                return;
-            }
 
             if (senha !== confirmar) {
                 alert("As senhas não coincidem. Por favor, tente novamente.");
@@ -74,13 +62,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         formLogin.addEventListener("submit", async function (e) {
             e.preventDefault();
 
-            // Proteção contra XSS
-            function escaparHTML(texto) {
-                const div = document.createElement('div');
-                div.textContent = texto;
-                return div.innerHTML;
-            }
-
             const nome = document.getElementById("login-nome").value;
             const senha = document.getElementById("login-senha").value;
 
@@ -97,7 +78,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
 
-    //Menu Hamburgue // Fonte :https://youtu.be/gekJwNUaq0E?si=slad7U1ogm0aOKXE
+    //Menu Hamburgue  Fonte :https://youtu.be/gekJwNUaq0E?si=slad7U1ogm0aOKXE
+
     const btnMenuMobile = document.getElementById('btn-menu-mobile');
     const menuMobile = document.querySelector('.menu-mobile');
 
@@ -106,8 +88,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 });
 
-
-
-
-
-
+// Proteção contra XSS  Fonte:https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting
+ 
+function escaparHTML(texto) {
+    const div = document.createElement('div');
+    div.textContent = texto;
+    return div.innerHTML;
+}
