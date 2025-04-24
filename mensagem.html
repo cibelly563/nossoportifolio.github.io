@@ -1,4 +1,5 @@
 <!DOCTYPE html>  <!--Fonte: https://forum.infinityfree.com/t/create-table-php/32563#google_vignette-->
+
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -7,14 +8,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="index.html"><button class="Voltar">Voltar</button></a>
+    <a href="index.html"><button class="Voltar" style="
+        font-size: 16px;
+        text-align: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        ">
+            Voltar
+        </button></a>
     <section class="formulario">
         <div class="interface">
             <h2 class="titulo">ENVIE <span>SUA MENSAGEM</span></h2>
-            <form id="form-contato">
-                <input type="text" id="nome" placeholder="Seu nome completo..." required>
-                <input type="email" id="email" placeholder="Seu e-mail..." required>
-                <textarea id="mensagem" placeholder="Sua mensagem..." required></textarea>
+            <form action="https://formsubmit.co/contaescolamariaclara@gmail.com" method="POST">
+                <input type="text" placeholder="Seu nome completo..." required>
+                <input type="email" placeholder="Seu e-mail..." required>
+                <textarea placeholder="Sua mensagem..." required></textarea>
                 <button type="submit">Enviar</button>
             </form>
         </div>
@@ -46,6 +58,6 @@
             });
         });
     </script>
+       
 </body>
 </html>
-
