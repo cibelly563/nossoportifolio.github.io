@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>  <!--Fonte: https://forum.infinityfree.com/t/create-table-php/32563#google_vignette-->
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -7,38 +7,45 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="index.html"><button class="Voltar" style="
-        font-size: 16px;
-        text-align: center;
-        justify-content: center;
-        width: 20px;
-        height: 20px;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        ">
-            Voltar
-        </button></a>
+    <a href="index.html"><button class="Voltar">Voltar</button></a>
     <section class="formulario">
         <div class="interface">
             <h2 class="titulo">ENVIE <span>SUA MENSAGEM</span></h2>
-            <form action="https://formsubmit.co/contaescolamariaclara@gmail.com" method="POST">
-                <input type="text" placeholder="Seu nome completo..." required>
-                <input type="email" placeholder="Seu e-mail..." required>
-                <textarea placeholder="Sua mensagem..." required></textarea>
+            <form id="form-contato">
+                <input type="text" id="nome" placeholder="Seu nome completo..." required>
+                <input type="email" id="email" placeholder="Seu e-mail..." required>
+                <textarea id="mensagem" placeholder="Sua mensagem..." required></textarea>
                 <button type="submit">Enviar</button>
             </form>
         </div>
     </section>
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const logs = JSON.parse(localStorage.getItem("logs") || "[]");
-            logs.push(`[${new Date().toLocaleString()}] - Página de mensagem acessada`);
-            localStorage.setItem("logs", JSON.stringify(logs));
+        document.getElementById('form-contato').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita o envio padrão do formulário
+
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const mensagem = document.getElementById('mensagem').value;
+
+            fetch('http://localhost:3000/enviar-email', { // Ajuste a URL se necessário
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ nome, email, mensagem })
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert(data); 
+                
+                document.getElementById('form-contato').reset();
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                alert('Ocorreu um erro ao enviar a mensagem.');
+            });
         });
-
-
-    </script>    
+    </script>
 </body>
 </html>
 
